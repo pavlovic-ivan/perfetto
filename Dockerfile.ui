@@ -20,7 +20,11 @@ WORKDIR /workspace
 COPY . .
 
 # Initialize a git repo (required by install-build-deps for git clean)
-RUN git init && git add -A && git commit -m "Initial commit"
+RUN git config --global user.email "docker@build" && \
+    git config --global user.name "Docker Build" && \
+    git init && \
+    git add -A && \
+    git commit -m "Initial commit"
 
 # Install build dependencies (downloads Node.js, build tools, etc.)
 RUN tools/install-build-deps --ui
