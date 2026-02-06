@@ -8,8 +8,6 @@ __pycache__/
 
 # Dependencies
 node_modules/
-buildtools/
-third_party/
 
 # Git and CI
 .git/
@@ -31,6 +29,3 @@ tmp/
 *.tmp
 *.log
 .DS_Store
-
-# Test files
-test/

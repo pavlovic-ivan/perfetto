@@ -19,8 +19,7 @@ WORKDIR /workspace
 # Copy the entire repository
 COPY . .
 
-# Install build dependencies and build the UI
-# The install-build-deps script downloads Node.js, build tools, etc.
+# Install build dependencies (downloads Node.js, build tools, etc.)
 RUN tools/install-build-deps --ui
 
 # Build the UI (output goes to out/ui/dist)
