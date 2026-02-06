@@ -39,7 +39,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copy built UI from builder stage
-COPY --from=builder /workspace/out/ui/dist /app/ui
+COPY --from=builder /workspace/out/ui/ui/dist /app/ui
 
 # Expose port 8080
 EXPOSE 8080
