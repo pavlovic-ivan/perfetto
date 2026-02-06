@@ -19,6 +19,9 @@ WORKDIR /workspace
 # Copy the entire repository
 COPY . .
 
+# Initialize a git repo (required by install-build-deps for git clean)
+RUN git init && git add -A && git commit -m "Initial commit"
+
 # Install build dependencies (downloads Node.js, build tools, etc.)
 RUN tools/install-build-deps --ui
 
